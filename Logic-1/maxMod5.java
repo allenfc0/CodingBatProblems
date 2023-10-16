@@ -12,10 +12,11 @@ public int maxMod5(int a, int b) {
     return 0;
   } 
   
-  if(a % 5 == b % 5 && a < b) {
+  if(a % 5 == b % 5) {
+    if(a > b) {
+      return b;
+    }
     return a;
-  } else if(a % 5 == b % 5) {
-    return b;
   }
   
   if(a > b) {
