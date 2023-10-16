@@ -8,22 +8,19 @@
  */
 
 public int maxMod5(int a, int b) {
-  int smaller = a;
-  int larger = b;
+  if(a == b) {
+    return 0;
+  } 
+  
+  if(a % 5 == b % 5 && a < b) {
+    return a;
+  } else if(a % 5 == b % 5) {
+    return b;
+  }
   
   if(a > b) {
-    larger = a;
-  } else {
-    smaller = b;
+    return a;
   }
+  return b;
   
-  if(larger == smaller) {
-    return 0;
-  }
-  
-  if(smaller % 5 == larger % 5) {
-    return smaller;
-  }
-  
-  return larger;
 }
